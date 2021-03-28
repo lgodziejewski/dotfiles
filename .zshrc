@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -71,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,15 +118,18 @@ alias aws-login='aws-vault login -d 8h'
 # init asdf
 . $HOME/.asdf/asdf.sh
 
+# asdf autocomplete
+fpath=(${ASDF_DIR}/completions $fpath)
+
 # add brew to path
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # turn off shared history
 unsetopt share_history
 
 # autocompletion
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 
 # aws autocomplete
 complete -C '/usr/local/bin/aws_completer' aws
