@@ -3,6 +3,12 @@
 # deps
 sudo pacman -S unzip
 
+# set up pass
+sudo pacman -S pass
+# TODO:
+# - init pass store after importing gpg key
+# - set repo as remote, change branch to main
+
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -17,3 +23,6 @@ asdf plugin add ruby
 asdf plugin add erlang
 asdf plugin add elixir
 asdf plugin add nodejs
+
+# aws+kubectl helpers
+sudo pacman -S aws-cli aws-vault kubectl kubectx

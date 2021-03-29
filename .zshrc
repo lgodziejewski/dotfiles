@@ -109,6 +109,7 @@ alias zshconfig="vim ~/.zshrc"
 #alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dkc="docker-compose"
 
+export AWS_VAULT_BACKEND=pass
 # start a shell session authenticated to AWS
 alias aws-shell='aws-vault exec -d 8h -n'
 
