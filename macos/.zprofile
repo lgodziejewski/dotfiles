@@ -11,8 +11,9 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 alias dkc='docker-compose'
 
 # These are necessary for ruby to compile (and probably other stuff using libffi
-export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
+# or not?
+# export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
 
 # aws
 export AWS_VAULT_BACKEND=pass

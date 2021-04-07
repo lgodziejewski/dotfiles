@@ -28,6 +28,9 @@ asdf plugin add erlang
 asdf plugin add elixir
 asdf plugin add nodejs
 
+# if ruby installation fails later on, try using the following flag:
+# RUBY_CFLAGS=-DUSE_FFI_CLOSURE_ALLOC
+
 # aws+kubectl helpers
 brew install sshuttle
 brew install awscli kubectl kubectx
