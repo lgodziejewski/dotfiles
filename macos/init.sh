@@ -5,7 +5,7 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # ruby/erlang/etc. dependencies
-brew install autoconf readline
+brew install autoconf readline postgresql shared-mime-info
 
 # set up pass
 brew install pass
