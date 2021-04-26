@@ -7,6 +7,9 @@
 # ruby/erlang/etc. dependencies
 brew install autoconf readline postgresql shared-mime-info protobuf
 
+# deps required by app logic
+brew install imagemagick
+
 # set up pass
 brew install pass
 # TODO:
