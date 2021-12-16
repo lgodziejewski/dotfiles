@@ -36,5 +36,5 @@ asdf plugin add nodejs
 
 # aws+kubectl helpers
 brew install sshuttle
-brew install awscli kubectl kubectx
+brew install awscli kubectl kubectx k9s
 brew install --cask aws-vault
