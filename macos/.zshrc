@@ -116,3 +116,6 @@ alias p10kconfig="vim ~/.p10k.zsh"
 # turn off shared history
 unsetopt share_history
 
+
+# Created by `pipx` on 2022-02-07 15:31:12
+export PATH="$PATH:/Users/lgodziejewski/.local/bin"
